@@ -1,8 +1,9 @@
 const { Telegraf } = require('telegraf')
 const { message } = require('telegraf/filters')
 const axios = require('axios')
+require('dotenv').config()
 
-const bot = new Telegraf('7387291898:AAFT1ZYBe5IqNNlAPYyXy5ds8HWpQw1XS6w')
+const bot = new Telegraf(process.env.key)
 
 const linearSearch = function linearSearch(arr, x) {
     for(let i = 0; i < arr.length; i++) {
